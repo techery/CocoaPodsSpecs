@@ -7,7 +7,7 @@
     "Josh Abernathy": "josh@github.com"
   },
   "source": {
-    "git": "https://github.com/ReactiveCocoa/ReactiveCocoa.git",
+    "git": "https://github.com/techery/ReactiveCocoa.git",
     "commit": "c16ded2cff03725514943ea81618263e207a5f5c"
   },
   "license": {
