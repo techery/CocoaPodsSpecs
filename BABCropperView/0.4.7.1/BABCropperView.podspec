@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 	s.screenshots			 = "http://brynbodayle.com/Files/BABCropperView.gif"
   s.license          = 'MIT'
   s.author           = { "Bryn Bodayle" => "bryn.bodayle@gmail.com" }
-  s.source           = { :git => "https://github.com/brynbodayle/BABCropperView.git", :commit => "8df1e0127f1a65125b0e5d328973a5138b54eeea" }
+  s.source           = { :git => "https://github.com/techery/BABCropperView.git", :commit => "8df1e0127f1a65125b0e5d328973a5138b54eeea" }
   s.social_media_url = 'https://twitter.com/brynbodayle'
 
   s.platform     = :ios, '7.0'
