@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     	= "https://github.com/mysterioustrousers/MTDates"
   s.license      	= 'MIT'
   s.author       	= { "Adam Kirk" => "atomkirk@gmail.com" }
-  s.source       	= { :git => "https://github.com/techery-pods-mirror/MTDates.git", :tag => "#{s.version}" }
+  s.source       	= { :git => "https://github.com/techery/MTDates.git", :tag => "#{s.version}" }
   s.source_files 	= 'MTDates/*.{h,m}'
   s.ios.deployment_target = "7.0"
   s.osx.deployment_target = "10.8"
