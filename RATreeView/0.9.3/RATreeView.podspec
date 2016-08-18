@@ -7,6 +7,8 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/Augustyniak/RATreeView"
   s.source           = { :git => "https://github.com/Augustyniak/RATreeView.git", :tag => "0.9.2" }
   
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.8'
   s.requires_arc = true
 
   s.source_files = "RATreeView/**/*.{h,m}"
