@@ -24,6 +24,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
+  s.exclude_files = 'Pod/Classes/Headers.h'
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.dependency 'RXPromise', '~> 0.13.3'
