@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Oscar"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "Actor programming model framework"
 
   s.description      = "The actor model in computer science is a mathematical model of concurrent computation that treats \"actors\" as the universal primitives of concurrent computation: in response to a message that it receives, an actor can make local decisions, create more actors, send more messages, and determine how to respond to the next message received.(Wikipedia)"
@@ -26,6 +26,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Pod/Classes/**/*'
 
   s.public_header_files = 'Pod/Classes/**/*.h'
-  s.dependency 'RXPromise', '~> 0.13'
+  s.dependency 'RXPromise', '~> 0.13.3'
   s.dependency   'CocoaLumberjack'
 end
