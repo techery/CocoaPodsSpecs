@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+  s.license = "MIT"
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -48,7 +48,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Sean Powers" => "sean@nxt-id.com" }
+  s.author = { "Sean Powers" => "sean@nxt-id.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -56,7 +56,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
   
-  s.platform     = :ios, "8.0"
+  s.platform = :ios, "8.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/techery/dt-smartcard-sdk-ios.git", :tag => "#{s.version}" }
+  s.source = { :git => "https://github.com/techery/dt-smartcard-sdk-ios.git", :tag => "#{s.version}" }
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -72,15 +72,23 @@ Pod::Spec.new do |s|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-	s.vendored_frameworks = 'Frameworks/DFULibrary.framework', 'Frameworks/NxtMobileServices.framework'
-
-
+  
+  s.subspec 'DFULibrary' do |os|
+  	os.vendored_frameworks = 'Frameworks/DFULibrary.framework'
+    os.xcconfig = { "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES" => "YES",
+                   "ENABLE_BITCODE" => "NO"}
+  end
+  
+  s.subspec 'NxtMobileServices' do |os|
+  	os.vendored_frameworks = 'Frameworks/NxtMobileServices.framework'
+  end
+  
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-
-   s.xcconfig = { "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES" => "YES" }
+  
+   s.default_subspecs = 'NxtMobileServices', 'DFULibrary'
 
 end
