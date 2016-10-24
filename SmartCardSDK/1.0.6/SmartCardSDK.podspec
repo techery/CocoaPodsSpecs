@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
- 
+
   s.description  = "SDK For SmartCard API. Consist oof two compiled frameworks: NxtMobileServices and DFU"
   s.homepage     = "https://github.com/techery/dt-smartcard-sdk-ios"
 
@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
-  
+
   s.platform = :ios, "8.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source = { :git => "https://github.com/techery/dt-smartcard-sdk-ios.git", :tag => "#{s.version}" }
+  s.source = { :git => "git@github.com:techery/dt-smartcard-sdk-ios.git", :tag => "#{s.version}" }
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -72,24 +72,24 @@ Pod::Spec.new do |s|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-  
+
   s.subspec 'DFULibrary' do |os|
   	os.vendored_frameworks = 'Frameworks/DFULibrary.framework'
     os.xcconfig = { "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES" => "YES",
                     "ENABLE_BITCODE" => "NO",
                     "SWIFT_VERSION" => "2.3"}
   end
-  
+
   s.subspec 'NxtMobileServices' do |os|
   	os.vendored_frameworks = 'Frameworks/NxtMobileServices.framework'
   end
-  
+
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-  
+
    s.default_subspecs = 'NxtMobileServices', 'DFULibrary'
 
 end
