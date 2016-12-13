@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source = { :git => "https://github.com/techery/dt-smartcard-sdk-ios.git", :tag => "#{s.version}" }
+  s.source = { :git => "git@github.com:techery/dt-smartcard-sdk-ios.git", :tag => "#{s.version}" }
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
