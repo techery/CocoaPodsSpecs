@@ -1,42 +1,19 @@
-{
-  "name": "TwitterCore",
-  "version": "3.3.0",
-  "summary": "Increase user engagement and app growth.",
-  "homepage": "https://github.com/twitter/twitter-kit-ios",
-  "documentation_url": "https://github.com/twitter/twitter-kit-ios/wiki",
-  "social_media_url": "https://twitter.com/TwitterDev",
-  "authors": "Twitter",
-  "platforms": {
-    "ios": "9.0",
-    "tvos": "9.0"
-  },
-  "source": {
-    "http": "https://github.com/techery-pods-mirror/twitter-kit-ios/releases/download/v3.4.1/TwitterCore.framework.zip"
-  },
-  "license": {
-    "type": "Commercial",
-    "text": "Copyright Twitter, Inc. All Rights Reserved. Use of this software is subject to the terms and conditions of the Twitter Kit Agreement located at https://dev.twitter.com/overview/terms/twitterkit and the Developer Agreement located at https://dev.twitter.com/overview/terms/agreement. OSS: https://github.com/twitter/twitter-kit-ios/blob/master/OS_LICENSES.md"
-  },
-  "ios": {
-    "vendored_frameworks": "iOS/TwitterCore.framework",
-    "frameworks": [
-      "Accounts",
-      "CoreData",
-      "CoreGraphics",
-      "Foundation",
-      "Security",
-      "Social",
-      "UIKit"
-    ]
-  },
-  "tvos": {
-    "vendored_frameworks": "tvOS/TwitterCore.framework",
-    "frameworks": [
-      "CoreData",
-      "CoreGraphics",
-      "Foundation",
-      "Security",
-      "UIKit"
-    ]
-  }
-}
+Pod::Spec.new do |s|
+s.name = 'TwitterCore'
+s.version = '3.3.0'
+
+s.ios.deployment_target = '9.0'
+s.platform = :ios, '9.0'
+s.platform = :tvos, '9.0'
+
+s.ios.frameworks = 'UIKit', 'Foundation', 'Accounts', 'CoreData', 'CoreGraphics', 'Security', 'Social'
+s.tvos.frameworks = 'UIKit', 'Foundation', 'CoreData', 'CoreGraphics', 'Security'
+
+s.ios.vendored_framework = 'UIKit', 'Foundation', 'Accounts', 'CoreData', 'CoreGraphics', 'Security', 'Social'
+
+s.license = { :type => 'Commercial', :text => 'Copyright Twitter, Inc. All Rights Reserved. Use of this software is subject to the terms and conditions of the Twitter Kit Agreement located at https://dev.twitter.com/overview/terms/twitterkit and the Developer Agreement located at https://dev.twitter.com/overview/terms/agreement. OSS: https://github.com/twitter/twitter-kit-ios/blob/master/OS_LICENSES.md' }
+s.summary = 'Increase user engagement and app growth.'
+s.homepage = 'https://github.com/twitter/twitter-kit-ios'
+s.source = { :http => 'https://github.com/techery-pods-mirror/twitter-kit-ios/releases/download/v3.4.1/TwitterCore.framework.zip'}
+
+end
